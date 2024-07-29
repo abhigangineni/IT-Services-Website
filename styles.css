@@ -7,16 +7,21 @@ body {
 header {
     background-color: #333;
     color: white;
-    padding: 10px 0;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    flex-wrap: wrap;
 }
 
 header .logo {
     font-size: 24px;
     font-weight: bold;
+}
+
+header nav {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 header nav a {
@@ -85,4 +90,30 @@ header .contact-info {
 
 .footer .social-icons a {
     margin: 0 5px;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+    
+    header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero .cta-button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .service, .testimonial {
+        flex: 1 1 100%;
+    }
 }
