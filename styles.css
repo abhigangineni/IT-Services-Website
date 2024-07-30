@@ -35,15 +35,34 @@ header .contact-info {
 }
 
 .hero {
-    background: url('hero-image.jpg') no-repeat center center/cover;
+    position: relative;
+    text-align: left;
     color: white;
-    text-align: center;
-    padding: 100px 20px;
+    /*margin-top: 20px; /* Add margin to push HERO below the header */
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    opacity: 2;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    color: white;
 }
 
 .hero h1 {
     font-size: 48px;
     margin: 0;
+}
+
+.hero p {
+    font-size: 24px;
+    margin: 10px 0;
 }
 
 .hero .cta-button {
@@ -70,50 +89,4 @@ header .contact-info {
     flex: 1 1 calc(33.333% - 20px);
     margin: 10px;
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
-}
-
-.footer a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-.footer .social-icons a {
-    margin: 0 5px;
-}
-
-/* Responsive Styles */
-
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-    }
-    
-    header nav {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero h1 {
-        font-size: 36px;
-    }
-
-    .hero .cta-button {
-        font-size: 16px;
-        padding: 8px 16px;
-    }
-
-    .service, .testimonial {
-        flex: 1 1 100%;
-    }
-}
+    border: 
